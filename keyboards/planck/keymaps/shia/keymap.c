@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Bksp |
+ * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Esc  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |      |      |Lft-Tb|Rgt-Tb|      | Left | Down | Up   |Right |      |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = {
-  {KC_TILD, KC_EXLM, KC_AT,   KC_HASH,             KC_DLR,              KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC},
+  {KC_TILD, KC_EXLM, KC_AT,   KC_HASH,             KC_DLR,              KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_ESC },
   {KC_DEL,  _______, _______, LGUI(LSFT(KC_LBRC)), LGUI(LSFT(KC_RBRC)), _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, KC_PIPE},
   {KC_LSFT, _______, _______, _______,             _______,             _______, _______, _______, _______, _______, _______, KC_RSFT},
   {_______, _______, _______, _______,             _______,             _______, _______, _______, _______, _______, _______, _______}
