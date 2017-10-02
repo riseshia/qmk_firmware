@@ -5,8 +5,7 @@
  * the Free Software Foundation, either version 2 of the License, or
  * (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * This program is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
@@ -186,7 +185,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         register_code(pressed_kc);
       } else {
-        if (pressed_kc == KC_ESC) {
+        if (keyboard_report->mods & MOD_BIT(KC_LCTL)) {
           register_code(KC_LCTL);
         }
         unregister_code(pressed_kc);
