@@ -179,12 +179,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case BCK_ESC:
       if (record->event.pressed) {
         if (keyboard_report->mods & MOD_BIT(KC_LCTL)) {
+          unregister_code(KC_LCTL);
           pressed_kc = KC_ESC;
         } else {
           pressed_kc = KC_BSPC;
         }
         register_code(pressed_kc);
       } else {
+        if (pressed_kc == KC_ESC) {
+          register_code(KC_LCTL);
+        }
         unregister_code(pressed_kc);
       }
       return false;
